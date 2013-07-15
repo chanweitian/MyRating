@@ -20,6 +20,7 @@
 		C356B7C517900865003EC172 /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C356B7C417900865003EC172 /* RatingViewController.m */; };
 		C356B7CD17900C68003EC172 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C356B7CC17900C68003EC172 /* PlayerViewController.m */; };
 		C356B7D317900CE6003EC172 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = C356B7D217900CE6003EC172 /* Player.m */; };
+		C383239E1793CF01004BA02D /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C383239D1793CF01004BA02D /* PlayerCell.m */; };
 		C3899AA617902EF000ABFE37 /* 1Star.png in Resources */ = {isa = PBXBuildFile; fileRef = C3899A8E17902EF000ABFE37 /* 1Star.png */; };
 		C3899AA717902EF000ABFE37 /* 1Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3899A8F17902EF000ABFE37 /* 1Star@2x.png */; };
 		C3899AA817902EF000ABFE37 /* 1StarSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = C3899A9017902EF000ABFE37 /* 1StarSmall.png */; };
@@ -68,6 +69,8 @@
 		C356B7CF17900CA3003EC172 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		C356B7D117900CE6003EC172 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		C356B7D217900CE6003EC172 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		C383239C1793CF01004BA02D /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		C383239D1793CF01004BA02D /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 		C3899A8E17902EF000ABFE37 /* 1Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1Star.png; sourceTree = "<group>"; };
 		C3899A8F17902EF000ABFE37 /* 1Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Star@2x.png"; sourceTree = "<group>"; };
 		C3899A9017902EF000ABFE37 /* 1StarSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1StarSmall.png; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				C356B7B717900865003EC172 /* RatingAppDelegate.h */,
 				C356B7B817900865003EC172 /* RatingAppDelegate.m */,
 				C356B7C017900865003EC172 /* MainStoryboard.storyboard */,
+				C383239C1793CF01004BA02D /* PlayerCell.h */,
+				C383239D1793CF01004BA02D /* PlayerCell.m */,
 				C356B7CC17900C68003EC172 /* PlayerViewController.m */,
 				C356B7C317900865003EC172 /* RatingViewController.h */,
 				C356B7C417900865003EC172 /* RatingViewController.m */,
@@ -295,6 +300,7 @@
 				C356B7C517900865003EC172 /* RatingViewController.m in Sources */,
 				C356B7CD17900C68003EC172 /* PlayerViewController.m in Sources */,
 				C356B7D317900CE6003EC172 /* Player.m in Sources */,
+				C383239E1793CF01004BA02D /* PlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "PlayerViewController.h"
 #import "Player.h"  
+#import "PlayerCell.h"
 
 @interface PlayerViewController ()
 
@@ -59,17 +60,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"PlayerCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PlayerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     Player *player = [self.players objectAtIndex:indexPath.row];
     
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-	nameLabel.text = player.name;
-	UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
-	gameLabel.text = player.name;
-	UIImageView * ratingImageView = (UIImageView *)
-    [cell viewWithTag:102];
-	ratingImageView.image = [self imageForRating:player.rating];
+	cell.nameLabel.text = player.name;
+	cell.gameLabel.text = player.game;
+	cell.ratingImageView.image = [self imageForRating:player.rating];
     
     return cell;
 }
@@ -85,6 +81,15 @@
 		case 5: return [UIImage imageNamed:@"5StarsSmall.png"];
 	}
 	return nil;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (editingStyle == UITableViewCellEditingStyleDelete)
+	{
+		[self.players removeObjectAtIndex:indexPath.row];
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	}
 }
 
 /*

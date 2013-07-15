@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="55" id="8cQ-ov-a34">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="55" id="8cQ-ov-a34" customClass="PlayerCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -48,9 +48,10 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asD-9K-BSz">
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="2Rx-c3-kzK"/>
                                                 <constraint firstAttribute="width" constant="156" id="Q65-I3-YLw"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -73,13 +74,18 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="uwF-jP-bZj" firstAttribute="top" secondItem="8cQ-ov-a34" secondAttribute="top" constant="16" id="SYu-Co-SRa"/>
-                                    <constraint firstItem="asD-9K-BSz" firstAttribute="top" secondItem="8cQ-ov-a34" secondAttribute="top" constant="5" id="lnj-bK-r8O"/>
+                                    <constraint firstItem="asD-9K-BSz" firstAttribute="top" secondItem="8cQ-ov-a34" secondAttribute="top" constant="3" id="DfV-uf-5K7"/>
+                                    <constraint firstItem="uwF-jP-bZj" firstAttribute="top" secondItem="8cQ-ov-a34" secondAttribute="top" constant="16" id="VvP-Lr-nOL"/>
                                     <constraint firstAttribute="trailing" secondItem="uwF-jP-bZj" secondAttribute="trailing" constant="29" id="q5C-xu-V2t"/>
                                     <constraint firstItem="EyV-zA-zII" firstAttribute="leading" secondItem="8cQ-ov-a34" secondAttribute="leading" constant="20" type="default" id="qgH-hh-OGj"/>
+                                    <constraint firstItem="EyV-zA-zII" firstAttribute="top" secondItem="8cQ-ov-a34" secondAttribute="top" constant="21" id="s5q-nc-RUe"/>
                                     <constraint firstItem="asD-9K-BSz" firstAttribute="leading" secondItem="8cQ-ov-a34" secondAttribute="leading" constant="20" type="default" id="xcG-St-aCL"/>
-                                    <constraint firstItem="EyV-zA-zII" firstAttribute="top" secondItem="8cQ-ov-a34" secondAttribute="top" constant="27" id="xxE-Sc-4sh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="gameLabel" destination="EyV-zA-zII" id="tx7-Kl-wPK"/>
+                                    <outlet property="nameLabel" destination="asD-9K-BSz" id="PAU-PU-aFh"/>
+                                    <outlet property="ratingImageView" destination="uwF-jP-bZj" id="PBl-lB-UHE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -139,6 +145,14 @@
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlayerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ratingImageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="PlayerViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerViewController.h"/>
